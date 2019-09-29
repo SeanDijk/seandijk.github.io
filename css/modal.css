@@ -1,0 +1,71 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    /* The modal should fill the whole screen, so that it can handle clicks outside of the popup and give it an overlay color.*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: opacity .25s ease;
+}
+
+.modal>* {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modal__bg {
+    background: rgba(0, 0, 0, .9);
+    cursor: pointer;
+}
+
+
+/* To make an invisable checkbox. The state is used to open and close the modal */
+
+.modal-state {
+    display: none;
+}
+
+
+/* If the state is checked, make the modal visable */
+
+.modal-state:checked+.modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__inner {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1em 2em;
+}
+
+.modal__close {
+    align-self: flex-end;
+    cursor: pointer;
+    /* #a3a3a3 */
+    filter: invert(61%) sepia(25%) saturate(0%) hue-rotate(162deg) brightness(100%) contrast(96%);
+}
+
+.modal__close:hover {
+    /* #787878 */
+    filter: invert(50%) sepia(0%) saturate(11%) hue-rotate(186deg) brightness(93%) contrast(86%);
+}
+
+@media screen and (max-width: 768px) {
+    .modal__inner {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+    }
+}

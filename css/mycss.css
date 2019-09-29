@@ -1,0 +1,172 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Header */
+
+.nav-bar {
+    background-color: #ffa726;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0 3px 3px grey;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.header-item {
+    color: black;
+    padding: 16px;
+}
+
+a.header-item {
+    text-decoration: none;
+}
+
+a.header-item:hover {
+    background-color: #E68E0D;
+}
+
+a.header-item:active {
+    background-color: #CC7400;
+}
+
+.header-filler {
+    flex-grow: 1;
+}
+
+.logo-text {
+    font-size: 24;
+}
+
+
+/* -Header */
+
+
+/* Main Content */
+
+main {
+    flex-grow: 1;
+}
+
+#section1 {
+    background-color: #78909c;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+#person-photo {
+    border-radius: 50%
+}
+
+#section2 {
+    font-family: 'Roboto', sans-serif;
+    height: 300px;
+    background-color: white;
+}
+
+#section3 {
+    height: 300px;
+    background-color: #78909c;
+}
+
+.modal-btn {
+    width: 200px;
+    height: 200px;
+}
+
+.modal-btn>* {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+.modal-btn-overlay {
+    background-color: #0086c3;
+    opacity: 0;
+}
+
+.modal-btn-icon {
+    position: relative;
+    opacity: 0;
+    width: auto;
+    height: 50%;
+    /* #f9973b: */
+    filter: invert(58%) sepia(76%) saturate(444%) hue-rotate(344deg) brightness(99%) contrast(97%);
+}
+
+.modal-btn:hover>.modal-btn-icon {
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+.modal-btn:hover>.modal-btn-overlay {
+    opacity: .4;
+    transition: opacity .4s ease;
+}
+
+
+/* -Main Content */
+
+
+/* Footer */
+
+footer {
+    height: 80px;
+    background-color: #0086c3;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+}
+
+
+/* -Footer */
+
+
+/* Typography */
+
+.text-uppercase {
+    text-transform: uppercase
+}
+
+
+/* Header ratio of 1.15  https://www.modularscale.com/?1&em&1.15 */
+
+h1 {
+    font-size: 4.652em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: .5em;
+}
+
+
+/* Generic */
+
+.header-item,
+#section1,
+.modal-btn,
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column
+}

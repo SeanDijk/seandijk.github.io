@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="css/mycss.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <script src="js/templates.js"></script>
     <title>Sean van Dijk</title>
 </head>
 
@@ -20,19 +21,19 @@
         <section id="section1">
             <img src="images/sean.jpg" id="person-photo"></img>
             <h1 class="text-uppercase">Sean van Dijk</h1>
-            <hr/>
-            <h3>Software Engineer</h2>
+            <div class="flex-row text-center">
+                <hr/>
+                <div id="cycle-img-wrapper">
+                    <!-- Placeholder so that it isn't blank when the page loades. -->
+                    <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
+                </div>
+                <hr>
+            </div>
+            <span id="job-title">Software Engineer</span>
 
 
         </section>
         <section id="section2">
-            <!-- <a class="modal-btn" href="#modal-1">
-                    <img class="modal-btn-img" src="images/sean.jpg"></img>
-                    <div class="modal-btn-overlay"></div>
-                    <img class="modal-btn-icon" src="images/zoom_in-24px.svg"></img>
-                </a> -->
-
-
             <label class="modal-btn" for="modal-1">
                 <img class="modal-btn-img" src="images/sean.jpg"></img>
                 <div class="modal-btn-overlay"></div>
@@ -118,6 +119,12 @@
     <footer>
 
     </footer>
+
+
+    <template id="template-cycle-img"> 
+        <input class="cycle-img-radio" type="radio" name="test"/>
+        <label class="cycle-img"><img></label>
+    </template>
 </body>
 
 </html>

@@ -8,25 +8,33 @@ body {
     flex-direction: column;
     background-color: whitesmoke;
     font-family: 'Roboto', sans-serif;
+    background-color: #1976d2;
 }
 
 
 /* Header */
 
 .nav-bar {
-    background-color: #ffa726;
+    background-color: #455a64;
+    color: white;
     height: 80px;
     box-sizing: border-box;
     display: flex;
     align-items: stretch;
-    box-shadow: 0 3px 3px grey;
+    box-shadow: 0 1px 5px black;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
 
+.nav-bar,
+.nav-bar>* {
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
 .header-item {
-    color: black;
+    color: inherit;
     padding: 16px;
 }
 
@@ -61,10 +69,10 @@ main {
 }
 
 #section1 {
-    background-color: #78909c;
-    flex-direction: column;
+    background-color: #1976d2;
     box-sizing: border-box;
     padding: 16px;
+    color: white
 }
 
 #person-photo {
@@ -77,9 +85,21 @@ main {
     background-color: white;
 }
 
+#section2 hr {
+    background-color: #455a64;
+}
+
 #section3 {
     height: 300px;
     background-color: #78909c;
+}
+
+#section1,
+#section2,
+#section3 {
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 32px;
 }
 
 
@@ -96,6 +116,7 @@ main {
     position: absolute;
     height: inherit;
     width: inherit;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(344deg) brightness(111%) contrast(100%);
 }
 
 .cycle-img>img {
@@ -115,6 +136,8 @@ main {
 #cycle-img-wrapper {
     width: 48px;
     height: 48px;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 
@@ -169,7 +192,7 @@ main {
 
 footer {
     height: 80px;
-    background-color: #0086c3;
+    background-color: #c56000;
     box-sizing: border-box;
     display: flex;
     align-items: stretch;
@@ -208,12 +231,13 @@ h3 {
 /* Generic */
 
 hr {
-    width: 100px;
-    height: 1px;
+    width: 150px;
+    height: 3px;
+    border: 0px;
+    background-color: white;
 }
 
 .header-item,
-#section1,
 .modal-btn,
 .text-center {
     display: flex;

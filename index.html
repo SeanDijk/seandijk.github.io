@@ -23,7 +23,7 @@
             <h1 class="text-uppercase">Sean van Dijk</h1>
             <div class="flex-row text-center">
                 <hr/>
-                <div id="cycle-img-wrapper">
+                <div id="cycle-img-wrapper-1" class="cycle-img-wrapper">
                     <!-- Placeholder so that it isn't blank when the page loades. -->
                     <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
                 </div>
@@ -36,11 +36,19 @@
         <section id="section2" class="text-center">
             <h2>Portfolio</h2>
             <div class="flex-row text-center">
-                <hr> H
+                <hr>
+                <div id="cycle-img-wrapper-2" class="cycle-img-wrapper">
+                    <!-- Placeholder so that it isn't blank when the page loades. -->
+                    <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
+                </div>
                 <hr>
             </div>
 
-            <label class="modal-btn" for="modal-1">
+            <div id="portfolio-items" class="flex-row text-center">
+
+            </div>
+
+            <!-- <label class="modal-btn" for="modal-1">
                 <img class="modal-btn-img" src="images/sean.jpg"></img>
                 <div class="modal-btn-overlay"></div>
                 <img class="modal-btn-icon" src="images/zoom_in-24px.svg"></img>
@@ -57,66 +65,14 @@
                         <img src="images/sean.jpg"></img>
                         <br/>
                     </header>
-
-
-                    a<br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a<br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/> a
-                    <br/>
-
+                    <p>
+                        Here goes more information over this site!
+                        <hr>
+                        <a href="https://github.com/SeanDijk/portfolio-minimal-js">Github</a>
+                    </p>
 
                 </article>
-            </div>
+            </div> -->
 
         </section>
         <section id="section3"></section>
@@ -131,6 +87,33 @@
         <input class="cycle-img-radio" type="radio" name="test"/>
         <label class="cycle-img"><img></label>
     </template>
+
+    <template id="modal-btn-and-modal">
+        <label class="modal-btn" for="${modalName}">
+            <img class="modal-btn-img"></img>
+            <div class="modal-btn-overlay"></div>
+            <img class="modal-btn-icon" src="images/zoom_in-24px.svg"></img>
+        </label>
+
+
+        <input class="modal-state" id="${modalName}" type="checkbox" />
+        <div class="modal">
+            <label class="modal__bg" for="${modalName}"></label>
+            <article class="modal__inner">
+                <label class="modal__close" for="${modalName}"><img src="images/close-24px.svg"></img></label>
+                <header class="text-center flex-column">
+                    <h1></h1>
+                    <img class="modal-img"></img>
+                    <br/>
+                </header>
+                <p>
+                </p>
+                <a href="https://github.com/SeanDijk/portfolio-minimal-js">Github</a>
+
+            </article>
+        </div>
+    </template>
+
 </body>
 
 </html>

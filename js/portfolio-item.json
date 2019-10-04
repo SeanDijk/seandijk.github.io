@@ -1,0 +1,14 @@
+[{
+    "button": {
+        "image": "images/sean.jpg"
+    },
+    "content": {
+        "title": "Portfolio website!",
+        "image": "images/sean.jpg",
+        "content": "Hello world!",
+        "links": []
+    },
+    "htmlSpecifics": {
+        "modalId": "modal-1"
+    }
+}]

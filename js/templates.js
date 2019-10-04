@@ -12,7 +12,8 @@ var images = [
 
 function cycleImageList(groupname, imageList, location) {
     var template = document.querySelector('#template-cycle-img');
-    console.log(template)
+
+    // Cycle through all the images in the list.
     for (let i = 0; i < imageList.length; i++) {
         const element = imageList[i];
         var clone = document.importNode(template.content, true);
@@ -20,8 +21,6 @@ function cycleImageList(groupname, imageList, location) {
         var input = clone.querySelector("input");
         var label = clone.querySelector("label");
         var img = clone.querySelector("img");
-
-        console.log(input)
 
         input.id = groupname + "-img-" + i
         input.name = groupname
@@ -38,8 +37,6 @@ function cycleImageList(groupname, imageList, location) {
             label.htmlFor = groupname + "-img-" + (i + 1)
         }
         img.src = element
-            // console.log(input)
-        console.log(input)
         location.appendChild(clone)
 
         // Remove placeholders.
@@ -48,7 +45,48 @@ function cycleImageList(groupname, imageList, location) {
         });
     }
 }
+
+function portfolioItem(location, jsonConfig) {
+    var template = document.querySelector('#modal-btn-and-modal');
+    var clone = document.importNode(template.content, true);
+
+    clone.querySelectorAll('label').forEach(function(element) {
+        element.htmlFor = jsonConfig.htmlSpecifics.modalId;
+    })
+    clone.querySelector("input").id = jsonConfig.htmlSpecifics.modalId;
+    clone.querySelector("h1").innerText = jsonConfig.content.title;
+    clone.querySelector("p").innerText = jsonConfig.content.content;
+
+    clone.querySelector(".modal-btn-img").src = jsonConfig.button.image;
+    clone.querySelector(".modal-img").src = jsonConfig.content.image;
+
+
+
+    location.appendChild(clone)
+
+}
+
 window.onload = function() {
     // Do the work after everything was loaded (DOM, media elements)
-    cycleImageList("icon-cycle", images, document.querySelector("#cycle-img-wrapper"))
+    cycleImageList("icon-cycle-1", images, document.querySelector("#cycle-img-wrapper-1"))
+    cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))
+
+
+    let testobj = {
+        "button": {
+            "image": "images/sean.jpg"
+        },
+        "content": {
+            "title": "Portfolio website!",
+            "image": "images/sean.jpg",
+            "content": "Hello world!",
+            "links": []
+        },
+        "htmlSpecifics": {
+            "modalId": "modal-1"
+        }
+    }
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
 }

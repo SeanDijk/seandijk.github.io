@@ -178,9 +178,14 @@ main {
 
 /* Modal */
 
+#portfolio-items {
+    flex-wrap: wrap;
+}
+
 .modal-btn {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
+    margin: 32px;
 }
 
 .modal-btn>* {
@@ -233,32 +238,6 @@ footer {
 
 
 /* -Footer */
-
-
-/* Typography */
-
-.text-uppercase {
-    text-transform: uppercase
-}
-
-
-/* Header ratio of 1.15  https://www.modularscale.com/?1&em&1.15 */
-
-h1 {
-    font-size: 4.652em;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    line-height: .5em;
-}
-
-h3 {
-    font-size: 3.518em;
-}
-
-#job-title {
-    font-size: 2.66em;
-    font-weight: 100;
-}
 
 
 /* Generic */

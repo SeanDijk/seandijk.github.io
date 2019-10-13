@@ -89,4 +89,9 @@ window.onload = function() {
     this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
     this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
     this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
+
 }

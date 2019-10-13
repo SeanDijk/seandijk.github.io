@@ -1,0 +1,90 @@
+:root {
+    --default-font-size: 16;
+    font-size: 16px;
+}
+
+.text-uppercase {
+    text-transform: uppercase
+}
+
+.single-line {
+    white-space: nowrap;
+}
+
+
+/* Header ratio of 1.15  https://www.modularscale.com/?1&em&1.15 */
+
+
+/* min */
+
+h1 {
+    font-size: 2.326em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: .5em;
+}
+
+h2 {
+    font-size: 2.023em;
+}
+
+#job-title {
+    font-size: 1.33em;
+}
+
+
+/* Scale */
+
+
+/* 
+    font-size: calc([min size] + ([delta size]]) * ((100vw - [min viewport width]) / ([maximum viewport width] - [minimum viewport width]))); 
+    
+    Note: px can not be multiplied with an other px value, but needs to be done with a number, resulting in a px value. 
+    A number cant be added with to a px value though. This is why we do: px + (number * px value) 
+*/
+
+@media screen and (min-width: 520px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    #job-title {
+        --min-size-px: calc(var(--default-font-size) * var(--min-font-size-multiply) *1px);
+        --delta-size: calc(var(--default-font-size) * var(--delta-font-size-multiply));
+        --factor-px: calc((100vw - 520px) / 380);
+        font-size: calc(var(--min-size-px) + var(--delta-size) * var(--factor-px));
+    }
+    h1 {
+        --min-font-size-multiply: 2.326;
+        --delta-font-size-multiply: 2.326;
+    }
+    h2 {
+        --min-font-size-multiply: 2.023;
+        --delta-font-size-multiply: 2.023;
+    }
+    #job-title {
+        --min-font-size-multiply: 1.33;
+        --delta-font-size-multiply: 1.33;
+    }
+}
+
+
+/* max */
+
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size: 4.652em;
+    }
+    #job-title {
+        font-size: 2.66em;
+    }
+    h2 {
+        font-size: 4.046em;
+    }
+}
+
+h3 {
+    font-size: 3.518em;
+}

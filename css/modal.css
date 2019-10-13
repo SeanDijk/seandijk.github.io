@@ -40,15 +40,17 @@
 }
 
 .modal__inner {
+    max-width: 800;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 90vw;
     height: 90%;
     margin: auto;
     overflow: auto;
     background: #fff;
     border-radius: 8px;
     padding: 1em 2em;
+    box-sizing: border-box;
 }
 
 .modal__close {
@@ -61,12 +63,4 @@
 .modal__close:hover {
     /* #787878 */
     filter: invert(50%) sepia(0%) saturate(11%) hue-rotate(186deg) brightness(93%) contrast(86%);
-}
-
-@media screen and (max-width: 768px) {
-    .modal__inner {
-        width: 90%;
-        height: 90%;
-        box-sizing: border-box;
-    }
 }

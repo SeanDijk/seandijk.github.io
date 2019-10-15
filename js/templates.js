@@ -10,6 +10,25 @@ var images = [
     'images/cycle/videogame_asset-24px.svg',
 ]
 
+/**
+ * Loads a json file.
+ * @param {String} path Path to the file.
+ * @param {(json)=> {}} callback Callback function. 
+ */
+function loadJSON(path, callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.responseType = "json"
+    xobj.open('GET', path, true);
+    xobj.onreadystatechange = function() {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(xobj.response);
+        }
+    };
+    xobj.send(null);
+}
+
+
 function cycleImageList(groupname, imageList, location) {
     var template = document.querySelector('#template-cycle-img');
 
@@ -60,38 +79,16 @@ function portfolioItem(location, jsonConfig) {
     clone.querySelector(".modal-btn-img").src = jsonConfig.button.image;
     clone.querySelector(".modal-img").src = jsonConfig.content.image;
 
-
-
     location.appendChild(clone)
-
 }
 
 window.onload = function() {
-    // Do the work after everything was loaded (DOM, media elements)
     cycleImageList("icon-cycle-1", images, document.querySelector("#cycle-img-wrapper-1"))
     cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))
 
-
-    let testobj = {
-        "button": {
-            "image": "images/sean.jpg"
-        },
-        "content": {
-            "title": "Portfolio website!",
-            "image": "images/sean.jpg",
-            "content": "Hello world!",
-            "links": []
-        },
-        "htmlSpecifics": {
-            "modalId": "modal-1"
-        }
-    }
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-    this.portfolioItem(document.querySelector("#portfolio-items"), testobj)
-
+    this.loadJSON('js/portfolio-item.json', (response) => {
+        response.forEach(element => {
+            this.portfolioItem(document.querySelector("#portfolio-items"), element)
+        });
+    })
 }

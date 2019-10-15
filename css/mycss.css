@@ -1,3 +1,14 @@
+:root {
+    --nav-bar-bg-color: #455a64;
+    --nav-bar-text-color: white;
+    --primary-bg-color: #1976d2;
+    --primary-bg-text-color: white;
+    --secondary-bg-color: white;
+    --secondary-bg-text-color: #455a64;
+    --tertiary-bg-color: #c56000;
+    --tertiary-text-color: #000000;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -6,17 +17,16 @@ body {
     display: flex;
     margin: 0;
     flex-direction: column;
-    background-color: whitesmoke;
     font-family: 'Roboto', sans-serif;
-    background-color: #1976d2;
+    background-color: var(--primary-bg-color);
 }
 
 
 /* Header */
 
 .nav-bar {
-    background-color: #455a64;
-    color: white;
+    background-color: var(--nav-bar-bg-color);
+    color: var(--nav-bar-text-color);
     height: 80px;
     box-sizing: border-box;
     display: flex;
@@ -73,10 +83,9 @@ main {
 /* Section 1 */
 
 #section1 {
-    background-color: #1976d2;
     box-sizing: border-box;
     padding: 16px;
-    color: white
+    color: var(--primary-bg-text-color)
 }
 
 #section1 .cycle-img-wrapper {
@@ -96,12 +105,12 @@ main {
 #section2 {
     font-family: 'Roboto', sans-serif;
     /* height: 300px; */
-    background-color: white;
-    color: #455a64;
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-bg-text-color);
 }
 
 #section2 hr {
-    background-color: #455a64;
+    background-color: var(--secondary-bg-text-color);
 }
 
 #section2 .cycle-img-wrapper {
@@ -116,7 +125,6 @@ main {
 
 #section3 {
     height: 300px;
-    background-color: #78909c;
 }
 
 
@@ -230,7 +238,8 @@ main {
 
 footer {
     height: 80px;
-    background-color: #c56000;
+    background-color: var(--tertiary-bg-color);
+    color: var(--tertiary-text-color);
     box-sizing: border-box;
     display: flex;
     align-items: stretch;
@@ -246,7 +255,7 @@ hr {
     width: 150px;
     height: 3px;
     border: 0px;
-    background-color: white;
+    background-color: var(--primary-bg-text-color);
 }
 
 .header-item,

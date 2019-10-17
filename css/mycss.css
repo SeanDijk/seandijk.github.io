@@ -93,7 +93,26 @@ main {
 }
 
 #person-photo {
-    border-radius: 50%
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+#person-photo:active {
+    transition: 2s ease-in-out;
+    transform: rotate(1turn);
+}
+
+#person-photo-wrapper,
+#person-photo {
+    border-radius: 50%;
+}
+
+#person-photo-wrapper:active::before,
+#person-photo-wrapper:active::after {
+    content: "Do a barrel roll!";
+    font-style: italic;
+    font-size: 4em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 

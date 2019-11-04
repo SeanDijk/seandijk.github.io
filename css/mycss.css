@@ -107,11 +107,15 @@ main {
     border-radius: 50%;
 }
 
-#person-photo-wrapper:active::before,
+#person-photo-wrapper {
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
 #person-photo-wrapper:active::after {
     content: "Do a barrel roll!";
     font-style: italic;
-    font-size: 4em;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 

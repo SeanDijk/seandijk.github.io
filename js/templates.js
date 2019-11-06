@@ -85,6 +85,8 @@ function portfolioItem(location, jsonConfig) {
 window.onload = function() {
     cycleImageList("icon-cycle-1", images, document.querySelector("#cycle-img-wrapper-1"))
     cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))
+    cycleImageList("icon-cycle-3", images, document.querySelector("#cycle-img-wrapper-3"))
+    cycleImageList("icon-cycle-4", images, document.querySelector("#cycle-img-wrapper-4"))
 
     this.loadJSON('js/portfolio-item.json', (response) => {
         response.forEach(element => {

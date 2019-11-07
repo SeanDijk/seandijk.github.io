@@ -108,28 +108,28 @@ main {
     --bb-text-color-filter: invert(31%) sepia(16%) saturate(683%) hue-rotate(155deg) brightness(96%) contrast(85%);
 }
 
-#person-photo {
+.person-photo {
     transition: 1s ease-in-out;
     cursor: pointer;
 }
 
-#person-photo:active {
+.person-photo:active {
     transition: 2s ease-in-out;
     transform: rotate(1turn);
 }
 
-#person-photo-wrapper,
-#person-photo {
+.person-photo-wrapper,
+.person-photo {
     border-radius: 50%;
 }
 
-#person-photo-wrapper {
+.person-photo-wrapper {
     justify-content: space-evenly;
     align-items: center;
 
 }
 
-#person-photo-wrapper:active::after {
+.person-photo-wrapper:active::after {
     content: "Do a barrel roll!";
     font-style: italic;
     font-family: "Comic Sans MS", "Comic Sans", cursive;

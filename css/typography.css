@@ -23,7 +23,7 @@ h1 {
     letter-spacing: 0.05em;
     line-height: .5em;
 }
-#person-photo-wrapper:active::after {
+.person-photo-wrapper:active::after {
     font-size: 2.326em;
 }
 
@@ -54,13 +54,13 @@ h2 {
     h5,
     h6,
     #job-title,
-    #person-photo-wrapper:active::after {
+    .person-photo-wrapper:active::after {
         --min-size-px: calc(var(--default-font-size) * var(--min-font-size-multiply) *1px);
         --delta-size: calc(var(--default-font-size) * var(--delta-font-size-multiply));
         --factor-px: calc((100vw - 520px) / 380);
         font-size: calc(var(--min-size-px) + var(--delta-size) * var(--factor-px));
     }
-    h1,#person-photo-wrapper:active::after {
+    h1,.person-photo-wrapper:active::after {
         --min-font-size-multiply: 2.326;
         --delta-font-size-multiply: 2.326;
     }
@@ -78,7 +78,7 @@ h2 {
 /* max */
 
 @media screen and (min-width: 900px) {
-    h1,#person-photo-wrapper:active::after {
+    h1,.person-photo-wrapper:active::after {
         font-size: 4.652em;
     }
     #job-title {

@@ -235,30 +235,41 @@ main {
 
 
 .about-me-text {
+    text-align: justify;
     flex-wrap: wrap;
     justify-content: center;
 }
 .about-me-text > p{
     max-width: 320px;
-    flex-shrink: 0;
     padding-right: 16px;
     padding-left: 16px;
 }
+@media screen and (max-width: 772px) {
+    .about-me-text > p{
+        max-width: inherit;
+    }
+}
+
+footer {
+    text-align: justify;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer > div {
+    align-items: center;;
+    max-width: 320px;
+    flex-grow: 1;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+@media screen and (max-width: 772px) {
+    .footer > div{
+        max-width: inherit;
+    }
+}
+
 
 /* -Main Content */
-
-
-/* Footer */
-
-/* footer {
-    box-sizing: border-box;
-    display: flex;
-    align-items: stretch;
-} */
-
-
-/* -Footer */
-
 
 /* Generic */
 

@@ -1,6 +1,6 @@
 :root {
-    --default-font-size: 16;
-    font-size: 16px;
+    --default-font-size: 18;
+    font-size: calc(var(--default-font-size)*1px);
 }
 
 .text-uppercase {

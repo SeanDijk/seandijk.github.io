@@ -230,6 +230,17 @@ main {
     transition: opacity .4s ease;
 }
 
+.tag {
+    padding: 8px;
+    margin-right: 8px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+    background-color: var(--primary-bg-color);
+    color: var(--primary-bg-text-color);
+}
 
 /* -Modal */
 

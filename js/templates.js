@@ -66,8 +66,10 @@ function cycleImageList(groupname, imageList, location) {
 }
 
 function portfolioItem(location, jsonConfig) {
-    var template = document.querySelector('#modal-btn-and-modal');
-    var clone = document.importNode(template.content, true);
+    let template = document.querySelector('#modal-btn-and-modal');
+    let tagTemplate = document.querySelector('#tag');
+
+    let clone = document.importNode(template.content, true);
 
     clone.querySelectorAll('label').forEach(function(element) {
         element.htmlFor = jsonConfig.htmlSpecifics.modalId;
@@ -78,6 +80,17 @@ function portfolioItem(location, jsonConfig) {
 
     clone.querySelector(".modal-btn-img").src = jsonConfig.button.image;
     clone.querySelector(".modal-img").src = jsonConfig.content.image;
+
+    let tagsDiv = clone.querySelector(".modal-tags")
+    jsonConfig.content.tags.forEach(tagText => {
+        console.log(tagText)
+        let tagClone = document.importNode(tagTemplate.content, true)
+        tagClone.querySelector("div").innerText = tagText
+        tagsDiv.appendChild(tagClone)
+    })
+
+
+    clone.querySelector(".modal-links")
 
     location.appendChild(clone)
 }

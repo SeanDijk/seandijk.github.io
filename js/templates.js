@@ -10,25 +10,6 @@ var images = [
     'images/cycle/videogame_asset-24px.svg',
 ]
 
-/**
- * Loads a json file.
- * @param {String} path Path to the file.
- * @param {(json)=> {}} callback Callback function. 
- */
-function loadJSON(path, callback) {
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.responseType = "json"
-    xobj.open('GET', path, true);
-    xobj.onreadystatechange = function() {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(xobj.response);
-        }
-    };
-    xobj.send(null);
-}
-
-
 function cycleImageList(groupname, imageList, location) {
     var template = document.querySelector('#template-cycle-img');
 
@@ -73,6 +54,7 @@ function portfolioItem(location, jsonConfig) {
 
     clone.querySelectorAll('label').forEach(function(element) {
         element.htmlFor = jsonConfig.htmlSpecifics.modalId;
+        element.setAttribute('data-category', jsonConfig.content.tags.reduce((s1, s2) => s1 + " " + s2));
     })
     clone.querySelector("input").id = jsonConfig.htmlSpecifics.modalId;
     clone.querySelector("h1").innerText = jsonConfig.content.title;
@@ -100,10 +82,7 @@ window.onload = function() {
     cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))
     cycleImageList("icon-cycle-3", images, document.querySelector("#cycle-img-wrapper-3"))
     cycleImageList("icon-cycle-4", images, document.querySelector("#cycle-img-wrapper-4"))
-
-    this.loadJSON('js/portfolio-item.json', (response) => {
-        response.forEach(element => {
-            this.portfolioItem(document.querySelector("#portfolio-items"), element)
-        });
-    })
+    portfolioItems.forEach(element => {
+        this.portfolioItem(document.querySelector("#portfolio-items"), element)
+    });
 }

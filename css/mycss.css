@@ -6,7 +6,7 @@
     --secondary-bg-color: white;
     --secondary-bg-text-color: #455a64;
     --tertiary-bg-color: #c56000;
-    --tertiary-text-color: #000000;
+    --tertiary-bg-text-color: #000000;
 }
 
 html {
@@ -150,7 +150,7 @@ main {
 
 /* Cycle img */
 
-.cycle-img-radio {
+.hidden {
     display: none;
 }
 
@@ -186,6 +186,34 @@ main {
 
 /* -Cycle img */
 
+/* Tags */
+.tag-filter-label {
+    cursor: pointer;
+    transition: opacity .4s ease;
+    pointer-events: all;
+
+}
+.tag-filter-btn:checked+.tag-filter-label{
+    background-color: var(--tertiary-bg-color);
+    color: var(--tertiary-bg-text-color);
+}
+
+#portfolio-items > input[value="All"]:checked ~ [data-category] {
+     display: inherit;
+}
+.tag-filter{
+    width: 100%;
+    text-align: center;
+}
+.tag-filter > input[value="CSS"]:checked ~ #portfolio-items>[data-category]:not([data-category~="CSS"]),
+.tag-filter > input[value="JavaScript"]:checked ~ #portfolio-items>[data-category]:not([data-category~="JavaScript"]),
+.tag-filter > input[value="Kotlin"]:checked ~ #portfolio-items>[data-category]:not([data-category~="Kotlin"]),
+.tag-filter > input[value="HTML"]:checked ~ #portfolio-items>[data-category]:not([data-category~="HTML"]),
+.tag-filter > input[value="CSS"]:checked ~ #portfolio-items>[data-category]:not([data-category~="CSS"]){
+    display: none;
+}
+
+/* -Tags */
 
 /* Modal */
 

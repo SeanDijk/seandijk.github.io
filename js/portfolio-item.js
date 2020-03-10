@@ -1,4 +1,4 @@
-[
+let portfolioItems = [
     {
         "button": {
             "image": "images/sean.jpg"
@@ -10,7 +10,7 @@
             "links": {
                 "github": "https://github.com/SeanDijk/portfolio-minimal-js"
             },
-            "tags": ["HTML", "CSS", "Js"]
+            "tags": ["HTML", "CSS", "JavaScript"]
         },
         "htmlSpecifics": {
             "modalId": "modal-1"

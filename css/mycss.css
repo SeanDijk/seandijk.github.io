@@ -210,7 +210,12 @@ main {
 .tag-filter > input[value="Kotlin"]:checked ~ #portfolio-items>[data-category]:not([data-category~="Kotlin"]),
 .tag-filter > input[value="HTML"]:checked ~ #portfolio-items>[data-category]:not([data-category~="HTML"]),
 .tag-filter > input[value="CSS"]:checked ~ #portfolio-items>[data-category]:not([data-category~="CSS"]){
-    display: none;
+    /* display: none; */
+    width:0;
+    height:0;
+    padding:0;
+    margin:0;
+    opacity:0;
 }
 
 /* -Tags */
@@ -225,6 +230,7 @@ main {
     width: 300px;
     height: 300px;
     margin: 32px;
+    transition:all 1s;
 }
 
 .modal-btn>* {

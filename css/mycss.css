@@ -40,8 +40,8 @@ body {
 
 .nav-bar,
 .nav-bar>* {
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .header-item {

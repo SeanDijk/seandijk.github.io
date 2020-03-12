@@ -46,6 +46,21 @@ function cycleImageList(groupname, imageList, location) {
     }
 }
 
+function filterButton(location, groupname, value){
+    let template = document.querySelector('#filter-button');
+    let clone = document.importNode(template.content, true);
+
+    let input = clone.querySelector('input')
+    input.id = value;
+    input.value = value;
+    input.name = groupname;
+
+    let label = clone.querySelector('label');
+    label.htmlFor = value;
+    label.innerText = value;
+    location.prepend(clone);
+}
+
 function portfolioItem(location, jsonConfig) {
     let template = document.querySelector('#modal-btn-and-modal');
     let tagTemplate = document.querySelector('#tag');
@@ -65,7 +80,6 @@ function portfolioItem(location, jsonConfig) {
 
     let tagsDiv = clone.querySelector(".modal-tags")
     jsonConfig.content.tags.forEach(tagText => {
-        console.log(tagText)
         let tagClone = document.importNode(tagTemplate.content, true)
         tagClone.querySelector("div").innerText = tagText
         tagsDiv.appendChild(tagClone)
@@ -82,7 +96,21 @@ window.onload = function() {
     cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))
     cycleImageList("icon-cycle-3", images, document.querySelector("#cycle-img-wrapper-3"))
     cycleImageList("icon-cycle-4", images, document.querySelector("#cycle-img-wrapper-4"))
+    
+    let filterButtonLocation = document.querySelector('.tag-filter');
+    let portfolioItemsLocation = document.querySelector("#portfolio-items");
+
+    let uniqueTags = new Set(portfolioItems.flatMap(element => element.content.tags));
+    Array.from(uniqueTags)
+      .sort()
+      .reverse()
+      .forEach(tag => {
+          this.filterButton(filterButtonLocation, 'portfolio-items-filter', tag)
+      });
+    this.filterButton(filterButtonLocation, 'portfolio-items-filter', 'All')
+
+
     portfolioItems.forEach(element => {
-        this.portfolioItem(document.querySelector("#portfolio-items"), element)
+        this.portfolioItem(portfolioItemsLocation, element)
     });
 }

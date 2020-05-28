@@ -201,9 +201,10 @@ main {
 #portfolio-items > input[value="All"]:checked ~ [data-category] {
      display: inherit;
 }
-.tag-filter{
+.tag-filter {
     width: 100%;
     text-align: center;
+    padding-top: 24px;
 }
 .tag-filter > input[value="CSS"]:checked ~ #portfolio-items>[data-category]:not([data-category~="CSS"]),
 .tag-filter > input[value="JavaScript"]:checked ~ #portfolio-items>[data-category]:not([data-category~="JavaScript"]),

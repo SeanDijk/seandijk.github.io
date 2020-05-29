@@ -1,5 +1,4 @@
-let portfolioItems = [
-    {
+let portfolioItems = [{
         "button": {
             "image": "images/sean.jpg"
         },
@@ -21,16 +20,36 @@ let portfolioItems = [
             "image": "images/sean.jpg"
         },
         "content": {
-            "title":"FLL Score app",
+            "title": "FLL Score app",
             "image": "images/sean.jpg",
             "content": "Hello world!",
             "links": {
                 "github": "https://github.com/SeanDijk/fll-score-app"
             },
             "tags": ["Kotlin", "Kotlin-js", "CSS"]
-        },"htmlSpecifics": {
+        },
+        "htmlSpecifics": {
             "modalId": "modal-2"
         }
 
-    }
+    },
+    {
+        "button": {
+            "image": "images/sean.jpg"
+        },
+        "content": {
+            "title": "FLL Score app",
+            "image": "images/sean.jpg",
+            "content": "Hello world!",
+            "links": {
+                "github": "https://github.com/SeanDijk/fll-score-app"
+            },
+            "tags": ["Kotlin", "Kotlin-js", "CSS"]
+        },
+        "htmlSpecifics": {
+            "modalId": "modal-2"
+        }
+
+    },
+
 ]

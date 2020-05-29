@@ -38,12 +38,6 @@ body {
     z-index: 100;
 }
 
-.nav-bar,
-.nav-bar>* {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
 .header-item {
     color: inherit;
     padding: 16px;
@@ -83,9 +77,11 @@ main {
     background-color: var(--bb-background-color);
     color: var(--bb-text-color);
 }
+
 .background-box hr {
     background-color: var(--bb-text-color)
 }
+
 .background-box .cycle-img-wrapper {
     filter: var(--bb-text-color-filter);
 }
@@ -126,7 +122,6 @@ main {
 .person-photo-wrapper {
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .person-photo-wrapper:active::after {
@@ -186,40 +181,46 @@ main {
 
 /* -Cycle img */
 
+
 /* Tags */
+
 .tag-filter-label {
     cursor: pointer;
     transition: opacity .4s ease;
     pointer-events: all;
-
 }
-.tag-filter-btn:checked+.tag-filter-label{
+
+.tag-filter-btn:checked+.tag-filter-label {
     background-color: var(--tertiary-bg-color);
     color: var(--tertiary-bg-text-color);
 }
 
-#portfolio-items > input[value="All"]:checked ~ [data-category] {
-     display: inherit;
+#portfolio-items>input[value="All"]:checked~[data-category] {
+    display: inherit;
 }
+
 .tag-filter {
     width: 100%;
     text-align: center;
     padding-top: 24px;
 }
-.tag-filter > input[value="CSS"]:checked ~ #portfolio-items>[data-category]:not([data-category~="CSS"]),
-.tag-filter > input[value="JavaScript"]:checked ~ #portfolio-items>[data-category]:not([data-category~="JavaScript"]),
-.tag-filter > input[value="Kotlin"]:checked ~ #portfolio-items>[data-category]:not([data-category~="Kotlin"]),
-.tag-filter > input[value="HTML"]:checked ~ #portfolio-items>[data-category]:not([data-category~="HTML"]),
-.tag-filter > input[value="CSS"]:checked ~ #portfolio-items>[data-category]:not([data-category~="CSS"]){
+
+.tag-filter>input[value="CSS"]:checked~#portfolio-items>[data-category]:not([data-category~="CSS"]),
+.tag-filter>input[value="JavaScript"]:checked~#portfolio-items>[data-category]:not([data-category~="JavaScript"]),
+.tag-filter>input[value="Kotlin"]:checked~#portfolio-items>[data-category]:not([data-category~="Kotlin"]),
+.tag-filter>input[value="HTML"]:checked~#portfolio-items>[data-category]:not([data-category~="HTML"]),
+.tag-filter>input[value="CSS"]:checked~#portfolio-items>[data-category]:not([data-category~="CSS"]) {
     /* display: none; */
-    width:0;
-    height:0;
-    padding:0;
-    margin:0;
-    opacity:0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
 }
 
+
 /* -Tags */
+
 
 /* Modal */
 
@@ -231,7 +232,7 @@ main {
     width: 300px;
     height: 300px;
     margin: 32px;
-    transition:all 1s;
+    transition: all 1s;
 }
 
 .modal-btn>* {
@@ -272,26 +273,27 @@ main {
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    
     background-color: var(--primary-bg-color);
     color: var(--primary-bg-text-color);
 }
 
-/* -Modal */
 
+/* -Modal */
 
 .about-me-text {
     text-align: justify;
     flex-wrap: wrap;
     justify-content: center;
 }
-.about-me-text > p{
+
+.about-me-text>p {
     max-width: 320px;
     padding-right: 16px;
     padding-left: 16px;
 }
+
 @media screen and (max-width: 772px) {
-    .about-me-text > p{
+    .about-me-text>p {
         max-width: inherit;
     }
 }
@@ -301,21 +303,25 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
 }
-footer > div {
-    align-items: center;;
+
+footer>div {
+    align-items: center;
+    ;
     max-width: 320px;
     flex-grow: 1;
     padding-right: 16px;
     padding-left: 16px;
 }
+
 @media screen and (max-width: 772px) {
-    .footer > div{
+    .footer>div {
         max-width: inherit;
     }
 }
 
 
 /* -Main Content */
+
 
 /* Generic */
 

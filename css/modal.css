@@ -1,66 +1,59 @@
 .modal {
-    opacity: 0;
-    visibility: hidden;
+    cursor: pointer;
+    outline: none
+}
+.modal > summary {
+    outline: none;
+}
+
+
+.modal[open] > summary::before {
     position: fixed;
-    /* The modal should fill the whole screen, so that it can handle clicks outside of the popup and give it an overlay color.*/
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    transition: opacity .25s ease;
-    z-index: 1000;
+    display: block;
+    content: '';
+    z-index: 120;
+    background: rgba(27,31,35,0.5);
 }
 
-.modal>* {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.modal> summary::-webkit-details-marker {
+    display:none;
 }
 
-.modal__bg {
-    background: rgba(0, 0, 0, .9);
-    cursor: pointer;
-}
-
-
-/* To make an invisable checkbox. The state is used to open and close the modal */
-
-.modal-state {
-    display: none;
-}
-
-
-/* If the state is checked, make the modal visable */
-
-.modal-state:checked+.modal {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal__inner {
-    max-width: 800;
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-    height: 90%;
-    margin: auto;
-    overflow: auto;
-    background: #fff;
+.modal-content {
+    background-color: #fff;
     border-radius: 8px;
-    padding: 1em 2em;
-    box-sizing: border-box;
+    cursor: auto;
+    overflow-y: auto;
+    max-height: 80vh;
+    max-width: 800px;
+    width: 90vw;
+    padding: 16px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+
+
+    /*Center horizontally and give some padding on the top*/
+    top: 0;
+    left: 50%;
+    margin: 5vh auto;
+    position: fixed;
+    transform: translateX(-50%);
+
+    /*Make sure it is above normal content*/
+    z-index: 999;
+
+    /*Animation*/
+    animation-name: fadein;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+
 }
 
-.modal__close {
-    align-self: flex-end;
-    cursor: pointer;
-    /* #a3a3a3 */
-    filter: invert(61%) sepia(25%) saturate(0%) hue-rotate(162deg) brightness(100%) contrast(96%);
-}
 
-.modal__close:hover {
-    /* #787878 */
-    filter: invert(50%) sepia(0%) saturate(11%) hue-rotate(186deg) brightness(93%) contrast(86%);
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

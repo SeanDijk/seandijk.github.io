@@ -19,7 +19,7 @@
         <span class="header-filler"></span>
         <a href='#section2' class="header-item">Projects</a>
         <a href='#section3' class="header-item">About me</a>
-        <a href='#section4' class="header-item">Conatact</a>
+        <a href='#section4' class="header-item">Contact</a>
 
     </header>
 
@@ -53,18 +53,7 @@
             </div>
 
             <div class="tag-filter">
-                <!-- <input class="tag-filter-btn hidden"type="radio" id="All" name="categories" value="All" checked> -->
-                <!-- <label class="tag-filter-label tag" for="All">All</label> -->
-                <!-- <input class="tag-filter-btn hidden"type="radio" id="CSS" name="categories" value="CSS">
-                <label class="tag-filter-label tag" for="CSS">CSS</label>
-                <input class="tag-filter-btn hidden"type="radio" id="JavaScript" name="categories" value="JavaScript">
-                <label class="tag-filter-label tag" for="JavaScript">JavaScript</label>
-                <input class="tag-filter-btn hidden"type="radio" id="Kotlin" name="categories" value="Kotlin">
-                <label class="tag-filter-label tag" for="Kotlin">Kotlin</label>
-                <input class="tag-filter-btn hidden"type="radio" id="Html" name="categories" value="Html">
-                <label class="tag-filter-label tag" for="Html">HTML</label> -->
                 <div id="portfolio-items" class="flex-row text-center">
-
                 </div>
             </div>
 
@@ -126,13 +115,13 @@
     </footer>
 
 
-    <template id="template-cycle-img"> 
+    <template id="template-cycle-img">
         <input class="cycle-img-radio hidden" type="radio" name="test"/>
         <label class="cycle-img"><img></label>
     </template>
 
     <template id="tag">
-        <div class="tag"></span>
+        <div class="tag"></div>
     </template>
 
     <template id="filter-button">
@@ -141,30 +130,23 @@
     </template>
 
     <template id="modal-btn-and-modal">
-        <label class="modal-btn" for="${modalName}" data-category="${tags}">
-            <img class="modal-btn-img"></img>
-            <div class="modal-btn-overlay"></div>
-            <img class="modal-btn-icon" src="images/zoom_in-24px.svg"></img>
-        </label>
-
-
-        <input class="modal-state" id="${modalName}" type="checkbox" />
-        <div class="modal">
-            <label class="modal__bg" for="${modalName}"></label>
-            <article class="modal__inner">
-                <label class="modal__close" for="${modalName}"><img src="images/close-24px.svg"></img></label>
-                <header class="text-center flex-column">
-                    <h1 class="single-line"></h1>
-                    <img class="modal-img"></img>
-                    <br/>
-                </header>
-                <p>
-                </p>
-                <div class="modal-tags flex-row text-center"></div>
-                <div class="modal-links flex-row"></div>
-
-            </article>
-        </div>
+        <details class="project modal" data-category="${tags}">
+            <summary class="modal-btn">
+                <img class="modal-btn-img"/>
+            </summary>
+            <section class="modal-content">
+                <article class="modal__inner">
+                    <header class="text-center flex-column">
+                        <h1 class="modal-title single-line"></h1>
+                        <img class="modal-img"/>
+                        <br/>
+                    </header>
+                    <div class="modal-inner-content"></div>
+                    <div class="modal-tags flex-row text-center"></div>
+                    <div class="modal-links flex-row"></div>
+                </article>
+            </section>
+        </details>
     </template>
 
 </body>

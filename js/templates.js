@@ -67,13 +67,10 @@ function portfolioItem(location, jsonConfig) {
 
     let clone = document.importNode(template.content, true);
 
-    clone.querySelectorAll('label').forEach(function(element) {
-        element.htmlFor = jsonConfig.htmlSpecifics.modalId;
-        element.setAttribute('data-category', jsonConfig.content.tags.reduce((s1, s2) => s1 + " " + s2));
-    })
-    clone.querySelector("input").id = jsonConfig.htmlSpecifics.modalId;
-    clone.querySelector("h1").innerText = jsonConfig.content.title;
-    clone.querySelector("p").innerText = jsonConfig.content.content;
+    clone.querySelector('details').setAttribute('data-category', jsonConfig.content.tags.reduce((s1, s2) => s1 + " " + s2));
+
+    clone.querySelector(".modal-title").innerText = jsonConfig.content.title;
+    clone.querySelector(".modal-inner-content").innerHTML = jsonConfig.content.content;
 
     clone.querySelector(".modal-btn-img").src = jsonConfig.button.image;
     clone.querySelector(".modal-img").src = jsonConfig.content.image;

@@ -61,53 +61,9 @@ function filterButton(location, groupname, value){
     location.prepend(clone);
 }
 
-function portfolioItem(location, jsonConfig) {
-    let template = document.querySelector('#modal-btn-and-modal');
-    let tagTemplate = document.querySelector('#tag');
-
-    let clone = document.importNode(template.content, true);
-
-    clone.querySelector('details').setAttribute('data-category', jsonConfig.content.tags.reduce((s1, s2) => s1 + " " + s2));
-
-    clone.querySelector(".modal-title").innerText = jsonConfig.content.title;
-    clone.querySelector(".modal-inner-content").innerHTML = jsonConfig.content.content;
-
-    clone.querySelector(".modal-btn-img").src = jsonConfig.button.image;
-    clone.querySelector(".modal-img").src = jsonConfig.content.image;
-
-    let tagsDiv = clone.querySelector(".modal-tags")
-    jsonConfig.content.tags.forEach(tagText => {
-        let tagClone = document.importNode(tagTemplate.content, true)
-        tagClone.querySelector("div").innerText = tagText
-        tagsDiv.appendChild(tagClone)
-    })
-
-
-    clone.querySelector(".modal-links")
-
-    location.appendChild(clone)
-}
-
 window.onload = function() {
     cycleImageList("icon-cycle-1", images, document.querySelector("#cycle-img-wrapper-1"))
     cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))
     cycleImageList("icon-cycle-3", images, document.querySelector("#cycle-img-wrapper-3"))
     cycleImageList("icon-cycle-4", images, document.querySelector("#cycle-img-wrapper-4"))
-    
-    let filterButtonLocation = document.querySelector('.tag-filter');
-    let portfolioItemsLocation = document.querySelector("#portfolio-items");
-
-    let uniqueTags = new Set(portfolioItems.flatMap(element => element.content.tags));
-    Array.from(uniqueTags)
-      .sort()
-      .reverse()
-      .forEach(tag => {
-          this.filterButton(filterButtonLocation, 'portfolio-items-filter', tag)
-      });
-    this.filterButton(filterButtonLocation, 'portfolio-items-filter', 'All')
-
-
-    portfolioItems.forEach(element => {
-        this.portfolioItem(portfolioItemsLocation, element)
-    });
 }

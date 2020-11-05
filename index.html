@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/mycss.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/devices.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <script src="js/portfolio-item.js"></script>
     <script src="js/templates.js"></script>
@@ -14,140 +16,290 @@
 </head>
 
 <body>
-    <header class="nav-bar">
-        <a href='#' class="header-item logo-text">Portfolio</a>
-        <span class="header-filler"></span>
-        <a href='#section2' class="header-item">Projects</a>
-        <a href='#section3' class="header-item">About me</a>
-        <a href='#section4' class="header-item">Contact</a>
+<header class="nav-bar">
+    <a href='#' class="header-item logo-text">Portfolio</a>
+    <span class="header-filler"></span>
+    <a href='#section2' class="header-item">Projects</a>
+    <a href='#section3' class="header-item">About me</a>
+    <a href='#section4' class="header-item">Contact</a>
 
-    </header>
+</header>
 
-    <main>
-        <section id="section1" class="background-box primary-background-box text-center content-section">
-            <div class="flex-column person-photo-wrapper">
-                <img src="images/sean.jpg" class="person-photo" oncontextmenu="blockContextMenu(event)"></img>
+<main>
+    <section id="section1" class="background-box primary-background-box text-center content-section">
+        <div class="flex-column person-photo-wrapper">
+            <img src="images/sean.jpg" class="person-photo" oncontextmenu="blockContextMenu(event)"></img>
+        </div>
+        <h1 class="text-uppercase single-line">Sean van Dijk</h1>
+        <div class="flex-row text-center">
+            <hr/>
+            <div id="cycle-img-wrapper-1" class="cycle-img-wrapper">
+                <!-- Placeholder so that it isn't blank when the page loades. -->
+                <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
             </div>
-            <h1 class="text-uppercase single-line">Sean van Dijk</h1>
-            <div class="flex-row text-center">
-                <hr/>
-                <div id="cycle-img-wrapper-1" class="cycle-img-wrapper">
-                    <!-- Placeholder so that it isn't blank when the page loades. -->
-                    <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
-                </div>
-                <hr>
+            <hr>
+        </div>
+        <span id="job-title">Software Engineer - Professional Nerd</span>
+
+
+    </section>
+    <section id="section2" class="background-box secondary-background-box text-center content-section">
+        <h2>Portfolio</h2>
+        <div class="flex-row text-center">
+            <hr>
+            <div id="cycle-img-wrapper-2" class="cycle-img-wrapper">
+                <!-- Placeholder so that it isn't blank when the page loades. -->
+                <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
             </div>
-            <span id="job-title">Software Engineer - Professional Nerd</span>
-
-
-        </section>
-        <section id="section2" class="background-box secondary-background-box text-center content-section">
-            <h2>Portfolio</h2>
-            <div class="flex-row text-center">
-                <hr>
-                <div id="cycle-img-wrapper-2" class="cycle-img-wrapper">
-                    <!-- Placeholder so that it isn't blank when the page loades. -->
-                    <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
-                </div>
-                <hr>
-            </div>
-
-            <div class="tag-filter">
-                <div id="portfolio-items" class="flex-row text-center">
-                </div>
-            </div>
-
-
-
-        </section>
-        <section id="section3" class="background-box primary-background-box text-center content-section">
-            <h2>About me</h2>
-            <div class="flex-row text-center">
-                <hr>
-                <div id="cycle-img-wrapper-3" class="cycle-img-wrapper">
-                    <!-- Placeholder so that it isn't blank when the page loades. -->
-                    <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
-                </div>
-                <hr>
-            </div>
-            <div class="about-me-text flex-row">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in bibendum tortor. Nunc nunc augue, cursus ac nulla eu, commodo tincidunt lorem. Quisque efficitur efficitur diam nec elementum. Sed eu quam at erat mattis mollis. Pellentesque
-                    feugiat nunc eu tortor sodales, quis interdum enim vehicula. Proin sed tempor odio, ac feugiat neque. Nullam ac magna aliquet, congue nibh aliquet, volutpat nisi. Sed et mi nunc. Sed viverra magna a lorem elementum, id pulvinar nisi
-                    lacinia. Cras ac laoreet est. Integer libero metus, blandit a sagittis ac, rhoncus rutrum eros.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in bibendum tortor. Nunc nunc augue, cursus ac nulla eu, commodo tincidunt lorem. Quisque efficitur efficitur diam nec elementum. Sed eu quam at erat mattis mollis. Pellentesque
-                    feugiat nunc eu tortor sodales, quis interdum enim vehicula. Proin sed tempor odio, ac feugiat neque. Nullam ac magna aliquet, congue nibh aliquet, volutpat nisi. Sed et mi nunc. Sed viverra magna a lorem elementum, id pulvinar nisi
-                    lacinia. Cras ac laoreet est. Integer libero metus, blandit a sagittis ac, rhoncus rutrum eros.</p>
-            </div>
-
-
-        </section>
-
-        <section id="section4" class="background-box secondary-background-box text-center content-section">
-            <h2>Contact</h2>
-            <div class="flex-row text-center">
-                <hr>
-                <div id="cycle-img-wrapper-4" class="cycle-img-wrapper">
-                    <!-- Placeholder so that it isn't blank when the page loades. -->
-                    <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
-                </div>
-                <hr>
-            </div>
-
-
-        </section>
-    </main>
-
-    <footer class="background-box tertiary-background-box flex-row">
-        <div class="flex-column">
-            <h3>Location</h3>
-            <span>Den Haag, Zuid-Holland<br>The Netherlands</span>
+            <hr>
         </div>
 
-        <div class="flex-column">
-            <h3>Around the web</h3>
-            <div class="flex-row">
-                <a target="_blank" rel="noopener noreferrer" class="social-link" href="https://github.com/SeanDijk"><img src="images/brands/github-brands.svg"></a>
-                <a target="_blank" rel="noopener noreferrer" class="social-link" href="https://stackoverflow.com/users/4916060/seanvd"><img src="images/brands/stack-overflow-brands.svg"></a>
-                <a target="_blank" rel="noopener noreferrer" class="social-link" href="https://www.linkedin.com/in/seanvandijk/"><img src="images/brands/linkedin-brands.svg"></a>
+        <div class="tag-filter">
+            <input class="tag-filter-btn hidden" type="radio" id="All" name="portfolio-items-filter" value="All" checked="">
+            <label class="tag-filter-label tag" for="All">All</label>
+
+            <input class="tag-filter-btn hidden" type="radio" id="CSS" name="portfolio-items-filter" value="CSS" checked="">
+            <label class="tag-filter-label tag" for="CSS">CSS</label>
+
+            <input class="tag-filter-btn hidden" type="radio" id="HTML" name="portfolio-items-filter" value="HTML" checked="">
+            <label class="tag-filter-label tag" for="HTML">HTML</label>
+
+            <input class="tag-filter-btn hidden" type="radio" id="WEB_DESIGN" name="portfolio-items-filter" value="HTML" checked="">
+            <label class="tag-filter-label tag" for="WEB_DESIGN">Web Design</label>
+
+            <input class="tag-filter-btn hidden" type="radio" id="JavaScript" name="portfolio-items-filter" value="JavaScript" checked="">
+            <label class="tag-filter-label tag" for="JavaScript">JavaScript</label>
+
+            <input class="tag-filter-btn hidden" type="radio" id="Kotlin" name="portfolio-items-filter" value="Kotlin" checked="">
+            <label class="tag-filter-label tag" for="Kotlin">Kotlin</label>
+
+            <input class="tag-filter-btn hidden" type="radio" id="Kotlin-js" name="portfolio-items-filter" value="Kotlin-js" checked="">
+            <label class="tag-filter-label tag" for="Kotlin-js">Kotlin-js</label>
+
+            <div id="portfolio-items" class="flex-row text-center">
+
+                <details class="project modal" data-category="HTML CSS WEB_DESIGN">
+                    <summary class="modal-btn">
+                        <img class="modal-btn-img" src="images/projects/ftr/ftr-logo-full.png">
+                    </summary>
+                    <section class="modal-content">
+                        <article class="modal__inner">
+                            <header class="text-center flex-column">
+                                <h1 class="modal-title single-line">First Time Right</h1>
+                                <div class="images-first-time-right" >
+                                    <div class="device-monitor">
+                                        <div class="device">
+                                            <div class="device-front">
+                                                <div class="device-mobile-img-wrapper">
+                                                    <img class="device-mobile-img" src="images/projects/ftr/ftr-desktop.png"/>
+                                                </div>
+                                            </div>
+
+                                            <div class="device-back">
+                                                Back
+                                            </div>
+
+                                            <div class="device-left"></div>
+                                            <div class="device-right"></div>
+                                            <div class="device-top"></div>
+                                            <div class="device-bottom"></div>
+
+                                        </div>
+                                    </div>
+                                    <div class="device-mobile">
+                                        <div class="device">
+                                            <div class="device-front">
+                                                <div class="device-mobile-bar-top"><span class="device-mobile-camera"></span></div>
+                                                <div class="device-mobile-img-wrapper">
+                                                    <img class="device-mobile-img" src="images/projects/ftr/mobile-ftr.jpg"/>
+                                                </div>
+                                                <div class="device-mobile-bar-bottom">
+                                                    <span>&#9665;</span>
+                                                    <span>&olcir;</span>
+                                                    <span>&#9723;</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="device-back">
+                                                Back
+                                            </div>
+
+                                            <div class="device-left"></div>
+                                            <div class="device-right"></div>
+                                            <div class="device-top"></div>
+                                            <div class="device-bottom"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </header>
+                            <div class="modal-inner-content">
+                                Hello world!
+                            </div>
+                            <div class="modal-tags flex-row text-center">
+                                <div class="tag">HTML</div>
+
+                                <div class="tag">CSS</div>
+
+                                <div class="tag">JavaScript</div>
+                            </div>
+                            <div class="modal-links flex-row"></div>
+                        </article>
+                    </section>
+                </details>
+
+                <details class="project modal" data-category="Kotlin Kotlin-js CSS">
+                    <summary class="modal-btn">
+                        <img class="modal-btn-img" src="images/sean.jpg">
+                    </summary>
+                    <section class="modal-content">
+                        <article class="modal__inner">
+                            <header class="text-center flex-column">
+                                <h1 class="modal-title single-line">FLL Score app</h1>
+                                <img class="modal-img" src="images/sean.jpg">
+                                <br>
+                            </header>
+                            <div class="modal-inner-content">Hello world!</div>
+                            <div class="modal-tags flex-row text-center">
+                                <div class="tag">Kotlin</div>
+
+                                <div class="tag">Kotlin-js</div>
+
+                                <div class="tag">CSS</div>
+                            </div>
+                            <div class="modal-links flex-row"></div>
+                        </article>
+                    </section>
+                </details>
+
+                <details class="project modal" data-category="Kotlin Kotlin-js CSS">
+                    <summary class="modal-btn">
+                        <img class="modal-btn-img" src="images/sean.jpg">
+                    </summary>
+                    <section class="modal-content">
+                        <article class="modal__inner">
+                            <header class="text-center flex-column">
+                                <h1 class="modal-title single-line">FLL Score app</h1>
+                                <img class="modal-img" src="images/sean.jpg">
+                                <br>
+                            </header>
+                            <div class="modal-inner-content">Hello world!</div>
+                            <div class="modal-tags flex-row text-center">
+                                <div class="tag">Kotlin</div>
+
+                                <div class="tag">Kotlin-js</div>
+
+                                <div class="tag">CSS</div>
+                            </div>
+                            <div class="modal-links flex-row"></div>
+                        </article>
+                    </section>
+                </details>
             </div>
-
         </div>
-    </footer>
 
 
-    <template id="template-cycle-img">
-        <input class="cycle-img-radio hidden" type="radio" name="test"/>
-        <label class="cycle-img"><img></label>
-    </template>
+    </section>
+    <section id="section3" class="background-box primary-background-box text-center content-section">
+        <h2>About me</h2>
+        <div class="flex-row text-center">
+            <hr>
+            <div id="cycle-img-wrapper-3" class="cycle-img-wrapper">
+                <!-- Placeholder so that it isn't blank when the page loades. -->
+                <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
+            </div>
+            <hr>
+        </div>
+        <div class="about-me-text flex-row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in bibendum tortor. Nunc nunc augue,
+                cursus ac nulla eu, commodo tincidunt lorem. Quisque efficitur efficitur diam nec elementum. Sed eu quam
+                at erat mattis mollis. Pellentesque
+                feugiat nunc eu tortor sodales, quis interdum enim vehicula. Proin sed tempor odio, ac feugiat neque.
+                Nullam ac magna aliquet, congue nibh aliquet, volutpat nisi. Sed et mi nunc. Sed viverra magna a lorem
+                elementum, id pulvinar nisi
+                lacinia. Cras ac laoreet est. Integer libero metus, blandit a sagittis ac, rhoncus rutrum eros.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in bibendum tortor. Nunc nunc augue,
+                cursus ac nulla eu, commodo tincidunt lorem. Quisque efficitur efficitur diam nec elementum. Sed eu quam
+                at erat mattis mollis. Pellentesque
+                feugiat nunc eu tortor sodales, quis interdum enim vehicula. Proin sed tempor odio, ac feugiat neque.
+                Nullam ac magna aliquet, congue nibh aliquet, volutpat nisi. Sed et mi nunc. Sed viverra magna a lorem
+                elementum, id pulvinar nisi
+                lacinia. Cras ac laoreet est. Integer libero metus, blandit a sagittis ac, rhoncus rutrum eros.</p>
+        </div>
 
-    <template id="tag">
-        <div class="tag"></div>
-    </template>
 
-    <template id="filter-button">
-        <input class="tag-filter-btn hidden"type="radio" id="${value}" name="${groupname}" value="${value}" checked>
-        <label class="tag-filter-label tag" for="${value}">${value}</label>
-    </template>
+    </section>
 
-    <template id="modal-btn-and-modal">
-        <details class="project modal" data-category="${tags}">
-            <summary class="modal-btn">
-                <img class="modal-btn-img"/>
-            </summary>
-            <section class="modal-content">
-                <article class="modal__inner">
-                    <header class="text-center flex-column">
-                        <h1 class="modal-title single-line"></h1>
-                        <img class="modal-img"/>
-                        <br/>
-                    </header>
-                    <div class="modal-inner-content"></div>
-                    <div class="modal-tags flex-row text-center"></div>
-                    <div class="modal-links flex-row"></div>
-                </article>
-            </section>
-        </details>
-    </template>
+    <section id="section4" class="background-box secondary-background-box text-center content-section">
+        <h2>Contact</h2>
+        <div class="flex-row text-center">
+            <hr>
+            <div id="cycle-img-wrapper-4" class="cycle-img-wrapper">
+                <!-- Placeholder so that it isn't blank when the page loades. -->
+                <label class="placeholder cycle-img"><img src="images/cycle/desktop_windows-24px.svg"></label>
+            </div>
+            <hr>
+        </div>
+
+
+    </section>
+</main>
+
+<footer class="background-box tertiary-background-box flex-row">
+    <div class="flex-column">
+        <h3>Location</h3>
+        <span>Den Haag, Zuid-Holland<br>The Netherlands</span>
+    </div>
+
+    <div class="flex-column">
+        <h3>Around the web</h3>
+        <div class="flex-row">
+            <a target="_blank" rel="noopener noreferrer" class="social-link" href="https://github.com/SeanDijk"><img
+                    src="images/brands/github-brands.svg"></a>
+            <a target="_blank" rel="noopener noreferrer" class="social-link"
+               href="https://stackoverflow.com/users/4916060/seanvd"><img src="images/brands/stack-overflow-brands.svg"></a>
+            <a target="_blank" rel="noopener noreferrer" class="social-link"
+               href="https://www.linkedin.com/in/seanvandijk/"><img src="images/brands/linkedin-brands.svg"></a>
+        </div>
+
+    </div>
+</footer>
+
+
+<template id="template-cycle-img">
+    <input class="cycle-img-radio hidden" type="radio" name="test"/>
+    <label class="cycle-img"><img></label>
+</template>
+
+<template id="tag">
+    <div class="tag"></div>
+</template>
+
+<template id="filter-button">
+    <input class="tag-filter-btn hidden" type="radio" id="${value}" name="${groupname}" value="${value}" checked>
+    <label class="tag-filter-label tag" for="${value}">${value}</label>
+</template>
+
+<template id="modal-btn-and-modal">
+    <details class="project modal" data-category="${tags}">
+        <summary class="modal-btn">
+            <img class="modal-btn-img"/>
+        </summary>
+        <section class="modal-content">
+            <article class="modal__inner">
+                <header class="text-center flex-column">
+                    <h1 class="modal-title single-line"></h1>
+                    <img class="modal-img"/>
+                    <br/>
+                </header>
+                <div class="modal-inner-content"></div>
+                <div class="modal-tags flex-row text-center"></div>
+                <div class="modal-links flex-row"></div>
+            </article>
+        </section>
+    </details>
+</template>
 
 </body>
 

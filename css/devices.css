@@ -1,0 +1,183 @@
+.device-monitor {
+    --device-width: calc(8 * 4em);
+    --device-height: calc(8 * 3em);
+    /*--device-depth: 1.5em;*/
+    --device-depth: 3.5em;
+    --device-border-radius: 4px;
+
+    --device-padding: .5em;
+
+    --device-top-bar-height: 0em;
+    --device-bottom-bar-height: 0em;
+
+    --device-color-default: linear-gradient(167deg, rgba(6,6,6,1) 0%, rgba(94,94,94,1) 23%, rgba(21,21,23,1) 35%);
+    --device-color-front: black;
+    --device-color-back: var(--device-color-default);
+    --device-color-left: var(--device-color-default);
+    --device-color-right: var(--device-color-default);
+    --device-color-top: var(--device-color-default);
+    --device-color-bottom: var(--device-color-default);
+
+    --device-transform: translateZ(-10em) rotateY(20deg);
+
+
+    height: var(--device-height);
+    width: var(--device-width);
+
+    perspective: 1200px;
+
+}
+
+.device-mobile {
+    --device-width: 14.5em;
+    --device-height: 30em;
+    /*--device-depth: 1.5em;*/
+    --device-depth: 2.5em;
+    --device-border-radius: 16px;
+
+    --device-padding: .5em;
+
+    --device-top-bar-height: .75em;
+    --device-bottom-bar-height: 2em;
+
+    --device-color-default: linear-gradient(167deg, rgba(6,6,6,1) 0%, rgba(94,94,94,1) 23%, rgba(21,21,23,1) 35%);
+    --device-color-front: black;
+    --device-color-back: var(--device-color-default);
+    --device-color-left: var(--device-color-default);
+    --device-color-right: var(--device-color-default);
+    --device-color-top: var(--device-color-default);
+    --device-color-bottom: var(--device-color-default);
+
+    --device-transform: translateZ(-10em) rotateY(-20deg);
+
+    height: var(--device-height);
+    width: var(--device-width);
+
+    perspective: 1000px;
+
+
+
+}
+
+.device {
+    position: relative;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    transform: var(--device-transform);
+    box-shadow: 10px 25px 51px 19px rgba(42, 42, 42, 0.35);
+
+}
+
+.device-front, .device-back, .device-left, .device-right, .device-top, .device-bottom {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-image-source: linear-gradient(167deg, rgba(6,6,6,1) 0%, rgba(94,94,94,1) 23%, rgba(21,21,23,1) 35%);
+
+}
+
+.device-front, .device-back {
+    height: var(--device-height);
+    width: var(--device-width);
+    /*border-radius: 16px;*/
+
+    border-radius: var(--device-border-radius);
+}
+
+.device-left, .device-right {
+    height: var(--device-height);
+    width: var(--device-depth);
+
+    left: calc(var(--device-width) / 2 - var(--device-depth) / 2);
+    border-radius: 16px;
+
+}
+
+.device-top, .device-bottom {
+    height: var(--device-depth);
+    width: var(--device-width);
+
+    top: calc(var(--device-height) / 2 - var(--device-depth) / 2);
+    border-radius: 16px;
+
+}
+
+
+.device-front {
+    transform: rotateY(0deg) translateZ(calc(var(--device-depth) / 2));
+
+    background: var(--device-color-front);
+    padding: var(--device-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.device-back {
+    background: var(--device-color-back);
+    transform: rotateY(180deg) translateZ(calc(var(--device-depth) / 2));
+}
+
+.device-right {
+    background: var(--device-color-right);
+    transform: rotateY( 90deg) translateZ(calc(var(--device-width) / 2));
+}
+
+.device-left {
+    background: var(--device-color-left);
+    transform: rotateY(-90deg) translateZ(calc(var(--device-width) / 2));
+}
+
+.device-top {
+    background: var(--device-color-top);
+    transform: rotateX( 90deg) translateZ(calc(var(--device-height) / 2));
+}
+.device-bottom {
+    background: var(--device-color-bottom);
+    transform: rotateX(-90deg) translateZ(calc(var(--device-height) / 2));
+}
+
+.device-mobile-img-wrapper {
+    width: 100%;
+    height: calc(100% - var(--device-top-bar-height) - var(--device-bottom-bar-height));
+}
+
+.device-mobile-img {
+    width: 100%;
+    height: 100%;
+}
+
+.device-mobile-bar-top {
+    height: .75em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: var(--device-border-radius) var(--device-border-radius) 0 0;
+
+    background: var(--device-color-front);
+}
+
+.device-mobile-camera {
+    background: #555;
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    /*border-style: solid;*/
+}
+
+.device-mobile-bar-bottom {
+    box-sizing: border-box;
+    height: 2em;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-weight: 900;
+    color: #b1b1b1;
+    border-radius: 0 0 var(--device-border-radius) var(--device-border-radius);
+}

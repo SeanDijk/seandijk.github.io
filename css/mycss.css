@@ -245,8 +245,8 @@ main {
 }
 
 .modal-btn-img {
-    width: 100%;
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .modal-btn::before {
@@ -283,6 +283,13 @@ main {
     border-radius: 20px;
     background-color: var(--primary-bg-color);
     color: var(--primary-bg-text-color);
+}
+
+.images-first-time-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 

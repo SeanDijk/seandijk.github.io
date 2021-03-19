@@ -46,21 +46,6 @@ function cycleImageList(groupname, imageList, location) {
     }
 }
 
-function filterButton(location, groupname, value){
-    let template = document.querySelector('#filter-button');
-    let clone = document.importNode(template.content, true);
-
-    let input = clone.querySelector('input')
-    input.id = value;
-    input.value = value;
-    input.name = groupname;
-
-    let label = clone.querySelector('label');
-    label.htmlFor = value;
-    label.innerText = value;
-    location.prepend(clone);
-}
-
 window.onload = function() {
     cycleImageList("icon-cycle-1", images, document.querySelector("#cycle-img-wrapper-1"))
     cycleImageList("icon-cycle-2", images, document.querySelector("#cycle-img-wrapper-2"))

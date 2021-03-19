@@ -1,5 +1,9 @@
 :root {
     --default-font-size: 18;
+
+    --job-title: 1.0;
+    --job-title-large: 2.66;
+
     font-size: calc(var(--default-font-size)*1px);
 }
 
@@ -32,7 +36,7 @@ h2 {
 }
 
 #job-title {
-    font-size: 1.33em;
+    font-size: calc(var(--job-title) * 1em);
 }
 
 
@@ -69,8 +73,8 @@ h2 {
         --delta-font-size-multiply: 2.023;
     }
     #job-title {
-        --min-font-size-multiply: 1.33;
-        --delta-font-size-multiply: 1.33;
+        --min-font-size-multiply: var(--job-title);
+        --delta-font-size-multiply: calc(var(--job-title-large) - var(--job-title));
     }
 }
 

@@ -28,9 +28,9 @@
     border-radius: 8px;
     cursor: auto;
     overflow-y: auto;
-    max-height: 80vh;
+    max-height: 90vh;
     width: 100%;
-    max-width: 900px;
+    max-width: 1024px;
     padding: 16px;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
 
@@ -54,6 +54,8 @@
 
 .modal-inner-content {
     text-align: justify;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 

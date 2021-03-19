@@ -7,6 +7,14 @@
     --secondary-bg-text-color: #455a64;
     --tertiary-bg-color: #c56000;
     --tertiary-bg-text-color: #000000;
+
+
+    --nav-bar-height: 80px;
+    --content-width: 1024px;
+
+
+    --project-box-size: 300px;
+    --project-box-margin: 32px;
 }
 
 html {
@@ -27,7 +35,7 @@ body {
 .nav-bar {
     background-color: var(--nav-bar-bg-color);
     color: var(--nav-bar-text-color);
-    height: 80px;
+    height: var(--nav-bar-height);
     box-sizing: border-box;
     display: flex;
     align-items: stretch;
@@ -71,6 +79,14 @@ a.header-item:active {
 
 main {
     flex-grow: 1;
+}
+.text-content{
+    max-width: var(--content-width);
+    text-align: justify;
+}
+
+#section1 {
+    height: calc(100vh - var(--nav-bar-height)) ;
 }
 
 .background-box {
@@ -183,10 +199,18 @@ main {
 
 
 /* Tags */
+.tag {
+    padding: 8px;
+    line-height: 48px;
+    margin-right: 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-bg-text-color);
+}
 
 .tag-filter-label {
     cursor: pointer;
-    transition: opacity .4s ease;
     pointer-events: all;
 }
 
@@ -230,10 +254,12 @@ main {
 
 .project {
     position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 32px;
-    /*transition: all 1s;*/
+    width: var(--project-box-size);
+    height: var(--project-box-size);
+    margin: var(--project-box-margin);
+    transition: all 1s;
+    transition-timing-function: ease-in-out;
+
 }
 .project > * {
     transition: none;
@@ -277,14 +303,6 @@ main {
     filter: invert(58%) sepia(76%) saturate(444%) hue-rotate(344deg) brightness(99%) contrast(97%);
 }
 
-.tag {
-    padding: 8px;
-    margin-right: 8px;
-    border-radius: 20px;
-    background-color: var(--primary-bg-color);
-    color: var(--primary-bg-text-color);
-}
-
 .images-first-time-right{
     display: flex;
     flex-direction: row;
@@ -307,12 +325,6 @@ main {
     padding-left: 16px;
 }
 
-@media screen and (max-width: 772px) {
-    .about-me-text > p {
-        max-width: inherit;
-    }
-}
-
 footer {
     text-align: justify;
     flex-wrap: wrap;
@@ -326,13 +338,6 @@ footer > div {
     padding-right: 16px;
     padding-left: 16px;
 }
-
-@media screen and (max-width: 772px) {
-    .footer > div {
-        max-width: inherit;
-    }
-}
-
 
 /* -Main Content */
 
@@ -368,4 +373,18 @@ hr {
     min-height: 48px;
     box-sizing: border-box;
     padding: 8px;
+}
+
+
+@media screen and (max-width: 772px) {
+    .about-me-text > p {
+        max-width: inherit;
+    }
+    .footer > div {
+        max-width: inherit;
+    }
+
+    #portfolio-items{
+        flex-direction: column;
+    }
 }

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/devices.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <script src="js/portfolio-item.js"></script>
     <script src="js/templates.js"></script>
     <script src="js/util.js"></script>
     <title>Sean van Dijk</title>
@@ -53,42 +52,31 @@
             </div>
             <hr>
         </div>
-        <p>
+        <p class="text-content">
             Hey! Welcome to my portfolio. On this site you can find a number of projects I've created.
             Since the journey is at least as important as the result, I try to highlight the journey and my key learning
             points of every project.
             Enjoy reading all about them and dont hesitate to contact me if you have any questions. Cheers!
         </p>
 
-
         <div class="tag-filter">
-            <input class="tag-filter-btn hidden" type="radio" id="All" name="portfolio-items-filter" value="All"
-                   checked="">
+            <input class="tag-filter-btn hidden" type="radio" id="All" name="portfolio-items-filter" value="All" checked>
             <label class="tag-filter-label tag" for="All">All</label>
 
-            <input class="tag-filter-btn hidden" type="radio" id="CSS" name="portfolio-items-filter" value="CSS"
-                   checked="">
+            <input class="tag-filter-btn hidden" type="radio" id="CSS" name="portfolio-items-filter" value="CSS">
             <label class="tag-filter-label tag" for="CSS">CSS</label>
 
-            <input class="tag-filter-btn hidden" type="radio" id="HTML" name="portfolio-items-filter" value="HTML"
-                   checked="">
+            <input class="tag-filter-btn hidden" type="radio" id="HTML" name="portfolio-items-filter" value="HTML">
             <label class="tag-filter-label tag" for="HTML">HTML</label>
 
-            <input class="tag-filter-btn hidden" type="radio" id="WEB_DESIGN" name="portfolio-items-filter" value="HTML"
-                   checked="">
+            <input class="tag-filter-btn hidden" type="radio" id="WEB_DESIGN" name="portfolio-items-filter" value="HTML">
             <label class="tag-filter-label tag" for="WEB_DESIGN">Web Design</label>
 
-            <input class="tag-filter-btn hidden" type="radio" id="JavaScript" name="portfolio-items-filter"
-                   value="JavaScript" checked="">
+            <input class="tag-filter-btn hidden" type="radio" id="JavaScript" name="portfolio-items-filter" value="JavaScript" >
             <label class="tag-filter-label tag" for="JavaScript">JavaScript</label>
 
-            <input class="tag-filter-btn hidden" type="radio" id="Kotlin" name="portfolio-items-filter" value="Kotlin"
-                   checked="">
+            <input class="tag-filter-btn hidden" type="radio" id="Kotlin" name="portfolio-items-filter" value="Kotlin">
             <label class="tag-filter-label tag" for="Kotlin">Kotlin</label>
-
-            <input class="tag-filter-btn hidden" type="radio" id="Kotlin-js" name="portfolio-items-filter"
-                   value="Kotlin-js" checked="">
-            <label class="tag-filter-label tag" for="Kotlin-js">Kotlin-js</label>
 
             <div id="portfolio-items" class="flex-row text-center">
 
@@ -109,11 +97,7 @@
                                                          src="images/projects/ftr/ftr-desktop.png"/>
                                                 </div>
                                             </div>
-
-                                            <div class="device-back">
-                                                Back
-                                            </div>
-
+                                            <div class="device-back"></div>
                                             <div class="device-left"></div>
                                             <div class="device-right"></div>
                                             <div class="device-top"></div>
@@ -137,10 +121,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="device-back">
-                                                Back
-                                            </div>
-
+                                            <div class="device-back"></div>
                                             <div class="device-left"></div>
                                             <div class="device-right"></div>
                                             <div class="device-top"></div>
@@ -340,35 +321,6 @@
 <template id="template-cycle-img">
     <input class="cycle-img-radio hidden" type="radio" name="test"/>
     <label class="cycle-img"><img></label>
-</template>
-
-<template id="tag">
-    <div class="tag"></div>
-</template>
-
-<template id="filter-button">
-    <input class="tag-filter-btn hidden" type="radio" id="${value}" name="${groupname}" value="${value}" checked>
-    <label class="tag-filter-label tag" for="${value}">${value}</label>
-</template>
-
-<template id="modal-btn-and-modal">
-    <details class="project modal" data-category="${tags}">
-        <summary class="modal-btn">
-            <img class="modal-btn-img"/>
-        </summary>
-        <section class="modal-content">
-            <article class="modal__inner">
-                <header class="text-center flex-column">
-                    <h1 class="modal-title single-line"></h1>
-                    <img class="modal-img"/>
-                    <br/>
-                </header>
-                <div class="modal-inner-content"></div>
-                <div class="modal-tags flex-row text-center"></div>
-                <div class="modal-links flex-row"></div>
-            </article>
-        </section>
-    </details>
 </template>
 
 </body>
